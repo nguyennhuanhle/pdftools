@@ -9,6 +9,10 @@ A modern desktop application for PDF & document manipulation — clean metadata,
 
 **Created by Mr Le Nguyen Nhu Anh** — [edtechcorner.com](https://edtechcorner.com)
 
+### ⬇️ [Download PDFTools.exe for Windows](https://github.com/nguyennhuanhle/pdftools/releases/latest/download/PDFTools.exe)
+
+> No Python required — just download and double-click to run!
+
 ---
 
 ## Features
@@ -71,8 +75,8 @@ Double-click to run. That's it! ✨
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/pdftech/pdf-cleaner.git
-cd pdf-cleaner
+git clone https://github.com/nguyennhuanhle/pdftools.git
+cd pdftools
 ```
 
 2. Create a virtual environment (recommended):

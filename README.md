@@ -5,7 +5,7 @@ A modern desktop application for PDF & document manipulation — clean metadata,
 ![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
 ![Platform](https://img.shields.io/badge/Platform-Windows-lightgrey.svg)
 ![License](https://img.shields.io/badge/License-MIT-green.svg)
-![Version](https://img.shields.io/badge/Version-1.0.0-orange.svg)
+![Version](https://img.shields.io/badge/Version-1.1.0-orange.svg)
 
 **Created by Mr Le Nguyen Nhu Anh** — [edtechcorner.com](https://edtechcorner.com)
 
@@ -52,6 +52,12 @@ A modern desktop application for PDF & document manipulation — clean metadata,
 ### 📋 PDF → MD
 - Convert PDF files to Markdown format
 - Intelligent text extraction with structure preservation
+- Batch conversion support
+- Drag & drop support
+
+### 📄 DOCX → PDF
+- Convert Word (.docx) files to PDF format
+- Uses Microsoft Word automation (Windows) with LibreOffice fallback
 - Batch conversion support
 - Drag & drop support
 
@@ -178,13 +184,15 @@ pdf-cleaner/
 │   ├── markdown_to_docx_tab.py         # MD → DOCX tab
 │   ├── pdf_to_docx_tab.py              # PDF → DOCX tab
 │   ├── pdf_to_md_tab.py                # PDF → MD tab
+│   ├── docx_to_pdf_tab.py              # DOCX → PDF tab
 │   ├── pdf_operations/
 │   │   ├── __init__.py
 │   │   ├── pdf_metadata_remover.py     # Metadata removal logic
 │   │   ├── pdf_chapter_detector.py     # Chapter detection
 │   │   ├── pdf_splitter.py             # PDF splitting logic
 │   │   ├── pdf_to_docx_converter.py    # PDF to DOCX conversion
-│   │   └── pdf_to_md_converter.py      # PDF to Markdown conversion
+│   │   ├── pdf_to_md_converter.py      # PDF to Markdown conversion
+│   │   └── docx_to_pdf_converter.py    # DOCX to PDF conversion
 │   └── md_operations/
 │       ├── __init__.py
 │       └── markdown_to_docx_converter.py  # Markdown to DOCX conversion

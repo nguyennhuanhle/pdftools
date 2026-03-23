@@ -17,6 +17,7 @@ from modules.markdown_merger_tab import MarkdownMergerTab
 from modules.markdown_to_docx_tab import MarkdownToDocxTab
 from modules.pdf_to_docx_tab import PDFToDocxTab
 from modules.pdf_to_md_tab import PDFToMdTab
+from modules.docx_to_pdf_tab import DocxToPdfTab
 from version import __version__, __app_name__, __author__
 
 
@@ -72,6 +73,7 @@ class PDFToolsApp:
         self.md_to_docx_tab = MarkdownToDocxTab(self.notebook, self.root)
         self.pdf_to_docx_tab = PDFToDocxTab(self.notebook, self.root)
         self.pdf_to_md_tab = PDFToMdTab(self.notebook, self.root)
+        self.docx_to_pdf_tab = DocxToPdfTab(self.notebook, self.root)
 
         # Add tabs to notebook
         self.notebook.add(self.clean_tab, text="  Clean PDF  ")
@@ -80,6 +82,7 @@ class PDFToolsApp:
         self.notebook.add(self.md_to_docx_tab, text="  MD → DOCX  ")
         self.notebook.add(self.pdf_to_docx_tab, text="  PDF → DOCX  ")
         self.notebook.add(self.pdf_to_md_tab, text="  PDF → MD  ")
+        self.notebook.add(self.docx_to_pdf_tab, text="  DOCX → PDF  ")
 
     def _bind_events(self):
         """Bind window events."""
@@ -97,6 +100,8 @@ class PDFToolsApp:
                 self.pdf_to_docx_tab.redraw_drop_zone()
             if hasattr(self, 'pdf_to_md_tab'):
                 self.pdf_to_md_tab.redraw_drop_zone()
+            if hasattr(self, 'docx_to_pdf_tab'):
+                self.docx_to_pdf_tab.redraw_drop_zone()
 
         self.root.bind("<Configure>", on_resize)
 
